@@ -30,13 +30,15 @@ Fork and clone this repository and answer questions as you research directly in 
 5. Mongo DBs are organized into documents. Describe an example of a table in SQL that contains users, and then describe the equivalent DB setup in Mongo.
   -  SQL: 
 ``` INSERT INTO users(user_id, age. status)
-    Values ('bcd001', 45, "a"): ```
+    Values ('bcd001', 45, "a"): 
+```
   - Mongo: 
 ``` db.users.insert({
 user_id:"bcd001"
 age: 45
 status: "a" 
-}) ```
+}) 
+```
 6. What is an example situation where a Mongo database makes sense versus a non-relational db?
   - makes collaboration easier - developers can own documents or portions of documents and evolve them as needed without intermediation or complex deendency chains between different terms.
 7. What are the benefits of SQL databases? NoSQL Databases?
