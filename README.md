@@ -17,14 +17,43 @@ Fork and clone this repository and answer questions as you research directly in 
 ## Questions:
 
 1. What does the term noSQL refer to, and what other term is often used synonymously with noSQL?
-1. What are some of the common arguments for using a non-relational versus a relational db?
-1. In this class we will be using the document style of non-relational databases. What are the charecteristics of a document based db? 
-1. In this class we will be using Mongo specificially as our no-SQL db. Look into Mongo and answer this question: what is the priamry difference between how Mongo is maintained vs SQL?
-1. Mongo DBs are organized into documents. Describe an example of a table in SQL that contains users, and then describe the equivalent DB setup in Mongo. 
-1. What is an example situation where a Mongo database makes sense versus a non-relational db?
-1. What are the benefits of SQL databases? NoSQL Databases?
-1. Explain the differences between ACID and BASE models.
-1. What should you consider when deciding between using a relational database or a non-relational database for your project?
+  - "Not Only SQL" is the synonymous term. noSQL refers to a non-tabular databases and store data differently than relational tables.
+2. What are some of the common arguments for using a non-relational versus a relational db?
+  - optimization on developer productivity
+  - allow developers to store huge amounts of unstructed data, providing felxibility
+  - optimized for agile environment - give developers ability to iterate quickly and make changes throughout the software stack all the way down to teh database(faster queries and ease of use)
+  - provide capabilities to scale out instead of scale up
+3. In this class we will be using the document style of non-relational databases. What are the charecteristics of a document based db? 
+  - Document databases store data in documents similar to JSON (JavaScript Object Notation) objects. Each document contains pairs of fields and values. The values can typically be a variety of types including things like strings, numbers, booleans, arrays, or objects.
+4. In this class we will be using Mongo specificially as our no-SQL db. Look into Mongo and answer this question: what is the priamry difference between how Mongo is maintained vs SQL?
+  - https://www.mongodb.com/nosql-explained/nosql-vs-sql#differences-between-sql-and-nosql
+5. Mongo DBs are organized into documents. Describe an example of a table in SQL that contains users, and then describe the equivalent DB setup in Mongo.
+  -  SQL: 
+``` INSERT INTO users(user_id, age. status)
+    Values ('bcd001', 45, "a"): ```
+  - Mongo: 
+``` db.users.insert({
+user_id:"bcd001"
+age: 45
+status: "a" 
+}) ```
+6. What is an example situation where a Mongo database makes sense versus a non-relational db?
+  - makes collaboration easier - developers can own documents or portions of documents and evolve them as needed without intermediation or complex deendency chains between different terms.
+7. What are the benefits of SQL databases? NoSQL Databases?
+  - SQL Benifits
+    - Commonality of the language and lack of complex code needed 
+    - Can be used from phone, labtops or PCs
+    - Well established and can quickly recieve records from a database
+  - noSQL Benifits
+    - flexible schema where you can easily make changes to the database
+    - uses language common to other dev languages so that developers can store their data the same as in their aplicable code
+    - follows the "data that is accessed together should be stored together", makes querying easier by building out not building up and eliminating join tables
+8. Explain the differences between ACID and BASE models.
+  - ACID; ACID stands for; Atomic, Consistent, Isolated, and Durable
+  - BASE stands for Basically Availible, Soft State, Eventually Consistent
+  - Some of the differences come the flexibility and structure that you are seaking; banks and financial instatutions use ACID because they need structure and reliablity, Social Media companies use BASE because they need to build out
+12. What should you consider when deciding between using a relational database or a non-relational database for your project?
+  - Think about what you are looking for in your project; flexibility, structure, association relationships, growth, etc.
 
 
 ## Visual Comparisons
